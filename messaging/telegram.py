@@ -10,10 +10,9 @@ class TelegramClient:
     def send_message(self, text):
         url = f"{self.base_url}/sendMessage"
 
-        response = requests.post(url, json={
-            "chat_id": self.chat_id,
-            "text": text
-        }, timeout=10)
+        response = requests.post(
+            url, json={"chat_id": self.chat_id, "text": text}, timeout=10
+        )
 
         response.raise_for_status()
 
