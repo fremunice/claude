@@ -13,4 +13,3 @@ debug-*.log
 llama_cache
 .smoke-results
 .env
-.env
